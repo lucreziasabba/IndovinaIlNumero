@@ -1,0 +1,57 @@
+﻿<Window x:Class="WpfIndovina.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfIndovina"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Background="#FF73C5C5">
+        <TextBox Name="txtLivello" HorizontalAlignment="Left" Height="63" Margin="45,152,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="180"  BorderBrush="#FF080101" BorderThickness="4" FontSize="20" FontWeight="Bold">
+            <TextBox.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF1250F5" Offset="0"/>
+                    <GradientStop Color="#FF97B4FF" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBox.Background>
+        </TextBox>
+        <Label Content="INSERISCI IL LIVELLO&#xD;&#xA;     DI DIFFICOLTA' &#xD;&#xA;         DA 1 A N" HorizontalAlignment="Left" Margin="45,50,0,0" VerticalAlignment="Top" Height="65" Width="170" FontSize="14" FontFamily="Tahoma" FontWeight="Bold" Foreground="#FF43435B"/>
+        <Label Content="INSERISCI UN NUMERO&#xD;&#xA;           DA 1 A N" HorizontalAlignment="Left" Margin="545,65,0,0" VerticalAlignment="Top" Height="50" Width="180" FontSize="14" FontFamily="Tahoma" FontWeight="Bold" Foreground="#FF43435B"/>
+        <TextBox Name="txtNumero" HorizontalAlignment="Left" Height="63" Margin="545,152,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="180" BorderBrush="#FF080101" BorderThickness="4" FontSize="20" FontWeight="Bold">
+            <TextBox.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF1250F5" Offset="0"/>
+                    <GradientStop Color="#FFB0CEF9" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBox.Background>
+        </TextBox>
+        <Button Content="GENERA" HorizontalAlignment="Left" Margin="305,152,0,0" VerticalAlignment="Top" Width="140" Height="55" FontSize="18" FontWeight="Bold" FontFamily="SansSerif" Click="Genera_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.498"/>
+                    <GradientStop Color="#FF3B2797" Offset="1"/>
+                    <GradientStop Color="#FF373FE6"/>
+                    <GradientStop Color="#FF373FE6" Offset="0.993"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <TextBox Name="txtNumEstratto" HorizontalAlignment="Left" Height="73" Margin="260,277,0,0" TextWrapping="Wrap" Text="" IsReadOnly="True" VerticalAlignment="Top" Width="235" FontWeight="Bold" FontStyle="Italic" TextDecorations="{x:Null}" FontSize="16" BorderBrush="#FF080101" BorderThickness="2">
+            <TextBox.Background>
+                <SolidColorBrush Color="#FFB9D1EA"/>
+            </TextBox.Background>
+        </TextBox>
+        <Button Content="RICOMINCIA" HorizontalAlignment="Left" Margin="65,277,0,0" VerticalAlignment="Top" Width="140" Height="55" FontSize="18" FontWeight="Bold" FontFamily="SansSerif" Click="Ricomincia_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.498"/>
+                    <GradientStop Color="#FF3B2797" Offset="1"/>
+                    <GradientStop Color="#FF373FE6"/>
+                    <GradientStop Color="#FF373FE6" Offset="0.993"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
+    </Grid>
+</Window>
