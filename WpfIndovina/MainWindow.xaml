@@ -21,7 +21,7 @@
             <TextBox.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF1250F5" Offset="0"/>
-                    <GradientStop Color="#FFB0CEF9" Offset="1"/>
+                    <GradientStop Color="#FF97B4FF" Offset="1"/>
                 </LinearGradientBrush>
             </TextBox.Background>
         </TextBox>
@@ -52,6 +52,18 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
+        <Button Content="INDOVINA" HorizontalAlignment="Left" Margin="305,65,0,0" VerticalAlignment="Top" Width="140" Height="55" FontSize="18" FontWeight="Bold" FontFamily="SansSerif" Click="Indovina_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.498"/>
+                    <GradientStop Color="#FF3B2797" Offset="1"/>
+                    <GradientStop Color="#FF373FE6"/>
+                    <GradientStop Color="#FF373FE6" Offset="0.993"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <TextBox Name="txtTentativi" HorizontalAlignment="Left" Height="75" Margin="580,310,0,0" TextWrapping="Wrap" Text="" IsReadOnly="True" VerticalAlignment="Top" Width="145" FontWeight="Bold" FontStyle="Italic" TextDecorations="{x:Null}" FontSize="16" BorderBrush="#FF080101" BorderThickness="2" Background="#FFB9D1EA"/>
 
     </Grid>
 </Window>

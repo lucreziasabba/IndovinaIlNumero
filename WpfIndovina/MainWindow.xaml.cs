@@ -20,23 +20,53 @@ namespace WpfIndovina
     /// </summary>
     public partial class MainWindow : Window
     {
-        Random random_generator = new Random();
+        
+
         public MainWindow()
         {
             InitializeComponent();
         }
-
+        Random random = new Random();
+        int livello;
+        int randomnumber;
+        int tentativi = 0;
+        
         private void Genera_Click(object sender, RoutedEventArgs e)
         {
+            txtTentativi.Text = ($"Hai fatto {tentativi} tentativi!");
             int livello = int.Parse(txtLivello.Text);
-            int RandomNumber = random_generator.Next(1, livello);
+            if (livello < 0 || livello >= 101)
+                MessageBox.Show("Il numero è fuori dai limiti");
+            else
+            {
+                randomnumber = random.Next(1, livello);
+                txtNumEstratto.Text = ($"Sto pensando..");
+                txtNumero.IsEnabled = true;
+            }
+            
+        }
+
+        private void Indovina_Click(object sender, RoutedEventArgs e)
+        {
+            tentativi++;
             int numero = int.Parse(txtNumero.Text);
-            if (numero == RandomNumber)
-                txtNumEstratto.Text = ($"Il numero estratto è {RandomNumber}. Complimenti!Hai vinto!");
-            else if (numero < RandomNumber)
+            if (numero == randomnumber)
+            {
+                txtNumEstratto.Text = ($"Il numero estratto è {randomnumber}. Complimenti!Hai vinto!");
+                txtTentativi.Text = ($"Hai vinto con {tentativi} tentativi!");
+            }
+            else if (numero < randomnumber)
+            {
                 txtNumEstratto.Text = ($"Il numero estratto è più grande di quello che hai inserito!");
-            else if (numero > RandomNumber)
+                txtTentativi.Text = ($"Hai fatto {tentativi} tentativi!");
+            }
+                
+            else if (numero > randomnumber)
+            {
                 txtNumEstratto.Text = ($"Il numero estratto è più piccolo di quello che hai inserito!");
+                txtTentativi.Text = ($"Hai fatto {tentativi} tentativi!");
+            }
+                
         }
 
         private void Ricomincia_Click(object sender, RoutedEventArgs e)
@@ -44,6 +74,7 @@ namespace WpfIndovina
             txtNumEstratto.Clear();
             txtNumero.Clear();
             txtLivello.Clear();
+            txtTentativi.Clear();
         }
     }
 }
